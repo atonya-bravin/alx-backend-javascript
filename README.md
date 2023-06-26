@@ -13,10 +13,10 @@ The objective of this section is to enable us to know;
 9. Iterators and for-of loops
 
 ## Requirements
-1. NodeJS 12.11.x
-   `curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh`
-   `sudo bash nodesource_setup.sh`
-   `sudo apt install nodejs -y`
+1. NodeJS 12.11.x  
+   `curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh`  
+   `sudo bash nodesource_setup.sh`  
+   `sudo apt install nodejs -y`  
 2. Jest: `npm install --save-dev jest`
 3. Babel: `npm install --save-dev babel-jest @babel/core @babel/preset-env`
 4. ESLint: `npm install --save-dev eslint`
