@@ -10,6 +10,6 @@ function initializeRooms(){
   }
 
   return rooms;
-}
+	}
 
 export default initializeRooms;
