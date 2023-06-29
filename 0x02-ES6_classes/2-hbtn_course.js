@@ -1,46 +1,55 @@
-class HolbertonCourse {
+export default class HolbertonCourse {
   constructor(name, length, students) {
-    this._name = typeof name === 'string' ? name : '';
-    this._length = typeof length === 'number' ? length : 0;
-    this._students = Array.isArray(students) ? students : [];
+    if (typeof name === 'string') {
+      this._name = name;
+    } else {
+      throw new TypeError('Name must be a string');
+    }
+    if (typeof length === 'number') {
+      this._length = length;
+    } else {
+      throw new TypeError('Length must be a number');
+    }
+    if (Array.isArray(students)) {
+      this._students = students;
+    } else {
+      throw new TypeError('Students must be an Array');
+    }
   }
 
-  // Getter and Setter for the 'name' attribute
   get name() {
     return this._name;
   }
 
-  set name(newName) {
-    if (typeof newName === 'string') {
-      this._name = newName;
-    } else {
-      throw new Error('Invalid value for name. String expected.');
-    }
-  }
-
-  // Getter and Setter for the 'length' attribute
   get length() {
     return this._length;
   }
 
-  set length(newLength) {
-    if (typeof newLength === 'number') {
-      this._length = newLength;
-    } else {
-      throw new Error('Invalid value for length. Number expected.');
-    }
-  }
-
-  // Getter and Setter for the 'students' attribute
   get students() {
     return this._students;
   }
 
-  set students(newStudents) {
-    if (Array.isArray(newStudents)) {
-      this._students = newStudents;
+  set name(name) {
+    if (typeof name === 'string') {
+      this._name = name;
     } else {
-      throw new Error('Invalid value for students. Array expected.');
+      throw new TypeError('Name must be a string');
+    }
+  }
+
+  set length(length) {
+    if (typeof length === 'number') {
+      this._length = length;
+    } else {
+      throw new TypeError('Length must be a number');
+    }
+  }
+
+  set students(students) {
+    if (Array.isArray(students)) {
+      this._students = students;
+    } else {
+      throw new TypeError('Students must be an Array');
     }
   }
 }
