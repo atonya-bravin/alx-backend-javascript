@@ -1,5 +1,5 @@
 /*
- * @parm {Set} set
+ * @param {Set} set
  * @param {Array} array
  */
 export default function hasValuesFromArray(set, array) {
